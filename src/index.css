@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth Transition for Theme Switching */
+html, body, div, main, nav, section, h1, h2, p, span, button {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* <--- This pushes the scroll landing spot down so Navbar doesn't cover content */
+}
