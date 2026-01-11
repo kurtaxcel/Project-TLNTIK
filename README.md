@@ -12,11 +12,13 @@ This initiative combines eco-tourism promotion with modern web technologies, pro
 * **Smart Dark Mode:** A system-aware theme toggle that adapts typography and contrast for night-time readability.
 * **Interactive Guide Directory:** A trusted list of verified local guides with direct "Call" and "Message" integration.
 * **Deep Linking:** "View Details" functionality that smoothly navigates and scrolls to specific mountain sections.
-* **Admin Panel:** Full CRUD (Create, Read, Update, Delete) functionality for managing mountain data with form validation.
-* **API Integration:** Seamless backend connectivity with insforge.dev for dynamic content management and data persistence.
-* **Fallback System:** Intelligent fallback to local mock data when API is unavailable, ensuring uninterrupted user experience.
-* **Dynamic Content Management:** Real-time mountain data updates without requiring code deployments.
-* **Performance First:** Built with Vite and React for lightning-fast loading, even on mobile data.
+* **Advanced Admin Panel:** Full CRUD (Create, Read, Update, Delete) functionality with comprehensive form validation, real-time error handling, and data sanitization.
+* **Robust API Architecture:** Multi-layered service architecture with `ApiService` and `MountainService` for seamless backend connectivity with insforge.dev.
+* **Intelligent Fallback System:** Automatic fallback to local mock data when API is unavailable, ensuring 100% uptime and uninterrupted user experience.
+* **Enhanced State Management:** Custom React hooks (`useMountains`, `useMountain`, `useTheme`) for optimized data flow and state synchronization.
+* **API Testing & Validation:** Built-in API testing utilities and data validation to ensure data integrity and system reliability.
+* **Dynamic Content Management:** Real-time mountain data updates without requiring code deployments, with instant UI synchronization.
+* **Performance First:** Built with Vite and React for lightning-fast loading, even on mobile data, with optimized bundle splitting.
 
 ## ⛰️ The Trilogy
 
@@ -31,9 +33,12 @@ This initiative combines eco-tourism promotion with modern web technologies, pro
 * **Animations:** Framer Motion
 * **Icons:** Lucide React
 * **Routing:** React Router DOM (v6)
-* **Backend Integration:** insforge.dev API
-* **State Management:** Custom React Hooks (useMountains, useMountain, useTheme)
-* **Development Tools:** ESLint for code quality
+* **Backend Integration:** insforge.dev API with proxy configuration
+* **API Layer:** Custom service architecture (`ApiService`, `MountainService`)
+* **State Management:** Custom React Hooks (`useMountains`, `useMountain`, `useTheme`)
+* **Data Validation:** Built-in form validation and data sanitization
+* **Testing Utilities:** API integration testing (`testApi.js`)
+* **Development Tools:** ESLint for code quality, Vite dev server with HMR
 
 ## 🚀 Getting Started
 
@@ -63,17 +68,30 @@ Follow these steps to run the project locally.
 ```
 /src
 ├── /components
-│   ├── /admin       # Admin Panel Components (MountainForm)
-│   ├── /common      # Reusable UI (SectionHeading, Buttons)
-│   ├── /home        # Hero section & Landing components
-│   ├── /layout      # Navbar (Glassmorphic) & Footer
-│   └── /mountains   # Mountain Showcase Cards
-├── /data            # Mock Data for Mountains & Guides
-├── /hooks           # Custom Logic (useTheme, useMountains, useMountain)
-├── /pages           # Main Views (Home, Trilogy, Guide, About, Admin)
-├── /services        # API Integration (api.js, mountainService.js)
-├── /utils           # Utility Functions (testApi.js)
-└── App.jsx          # Routing & Scroll Logic
+│   ├── /admin       # Admin Panel Components (MountainForm with validation)
+│   ├── /common      # Reusable UI Components (SectionHeading, Buttons)
+│   ├── /home        # Hero Section & Landing Components
+│   ├── /layout      # Navigation (Glassmorphic Navbar) & Footer
+│   └── /mountains   # Mountain Showcase Cards with Deep Linking
+├── /data            # Mock Data (Mountains & Guides) for Fallback System
+├── /hooks           # Custom React Hooks for State Management
+│   ├── useMountains.js  # CRUD operations with API fallback
+│   ├── useMountain.js   # Individual mountain data management
+│   └── useTheme.js      # Dark/Light mode state management
+├── /pages           # Main Application Views
+│   ├── Home.jsx         # Landing page with hero section
+│   ├── Trilogy.jsx      # Mountain showcase with deep linking
+│   ├── Guide.jsx        # Guide directory with contact integration
+│   ├── About.jsx        # Project information and developer details
+│   └── Admin.jsx        # Content management dashboard
+├── /services        # API Integration Layer
+│   ├── api.js           # Base API service with error handling
+│   └── mountainService.js # Mountain-specific CRUD operations
+├── /utils           # Utility Functions & Testing
+│   └── testApi.js       # API integration testing utilities
+├── index.css        # Global Styles & Tailwind Imports
+├── main.jsx         # React Application Entry Point
+└── App.jsx          # Routing, Scroll Logic & App Structure
 ```
 
 ## 👨‍💻 Author

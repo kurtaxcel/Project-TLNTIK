@@ -7,7 +7,7 @@ const guides = [
   { 
     id: 1,
     name: "Delly", 
-    verification: "Brgy. ID: 2026-001", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0992 535 6659",
     link: "tel:09925356659"
@@ -15,7 +15,7 @@ const guides = [
   { 
     id: 2,
     name: "Josh Garcia", 
-    verification: "Brgy. ID: 2026-002", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0950 274 6207",
     link: "tel:09502746207"
@@ -23,7 +23,7 @@ const guides = [
   { 
     id: 3,
     name: "Kim Badlis", 
-    verification: "Brgy. ID: 2026-003", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0997 167 7923",
     link: "tel:09971677923"
@@ -31,7 +31,7 @@ const guides = [
   { 
     id: 4,
     name: "Marlyn Almario", 
-    verification: "Brgy. ID: 2026-004", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0927 287 7321",
     link: "tel:09272877321"
@@ -39,7 +39,7 @@ const guides = [
   { 
     id: 5,
     name: "Emmanuel Dimapilis", 
-    verification: "Brgy. ID: 2026-005", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0935 899 0079",
     link: "tel:09358990079"
@@ -47,7 +47,7 @@ const guides = [
   { 
     id: 6,
     name: "Maricel Badlis", 
-    verification: "Brgy. ID: 2026-006", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0926 201 4074",
     link: "tel:09262014074"
@@ -55,7 +55,7 @@ const guides = [
   { 
     id: 7,
     name: "Myrna Obado", 
-    verification: "Brgy. ID: 2026-007", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0994 276 1379",
     link: "tel:09942761379"
@@ -63,7 +63,7 @@ const guides = [
   { 
     id: 8,
     name: "Sherwin Bacquian", 
-    verification: "Brgy. ID: 2026-008", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0965 139 7480",
     link: "tel:09651397480"
@@ -71,7 +71,7 @@ const guides = [
   { 
     id: 9,
     name: "Monica Saldania", 
-    verification: "Brgy. ID: 2026-009", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0992 514 9845",
     link: "tel:09925149845"
@@ -79,7 +79,7 @@ const guides = [
   { 
     id: 10,
     name: "Lydia Flores", 
-    verification: "Brgy. ID: 2026-010", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0955 449 2244",
     link: "tel:09554492244"
@@ -87,7 +87,7 @@ const guides = [
   { 
     id: 11,
     name: "Ella Badlis", 
-    verification: "Brgy. ID: 2026-011", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0952 559 2230",
     link: "tel:09525592230"
@@ -95,7 +95,7 @@ const guides = [
   { 
     id: 12,
     name: "Mario Fontanilla", 
-    verification: "Brgy. ID: 2026-012", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0975 461 0071",
     link: "tel:09754610071"
@@ -103,7 +103,7 @@ const guides = [
   { 
     id: 13,
     name: "C Jay Flores", 
-    verification: "Brgy. ID: 2026-013", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0955 059 1859",
     link: "tel:09550591859"
@@ -111,7 +111,7 @@ const guides = [
   { 
     id: 14,
     name: "Edil Almario", 
-    verification: "Brgy. ID: 2026-014", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0955 391 0247",
     link: "tel:09553910247"
@@ -119,7 +119,7 @@ const guides = [
   { 
     id: 15,
     name: "Manny Badlis", 
-    verification: "Brgy. ID: 2026-015", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0997 167 7914",
     link: "tel:09971677914"
@@ -127,7 +127,7 @@ const guides = [
   { 
     id: 16,
     name: "Jenilyn Vislenio", 
-    verification: "Brgy. ID: 2026-016", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0991 579 4974",
     link: "tel:09915794974"
@@ -135,7 +135,7 @@ const guides = [
   { 
     id: 17,
     name: "Salvador Alonzo", 
-    verification: "Brgy. ID: 2026-017", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0955 390 1197",
     link: "tel:09553901197"
@@ -143,7 +143,7 @@ const guides = [
   { 
     id: 18,
     name: "Mark Anthony Umila", 
-    verification: "Brgy. ID: 2026-018", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0965 754 9221",
     link: "tel:09657549221"
@@ -151,7 +151,7 @@ const guides = [
   { 
     id: 19,
     name: "Florida Paez", 
-    verification: "Brgy. ID: 2026-019", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0948 888 6815",
     link: "tel:09488886815"
@@ -159,7 +159,7 @@ const guides = [
   { 
     id: 20,
     name: "Leonardo Perey", 
-    verification: "Brgy. ID: 2026-020", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0950 902 5272",
     link: "tel:09509025272"
@@ -167,7 +167,7 @@ const guides = [
   { 
     id: 21,
     name: "Loida Palmiano", 
-    verification: "Brgy. ID: 2026-021", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0955 755 1536",
     link: "tel:09557551536"
@@ -175,7 +175,7 @@ const guides = [
   { 
     id: 22,
     name: "Michael Badlis", 
-    verification: "Brgy. ID: 2026-022", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0926 201 4074",
     link: "tel:09262014074"
@@ -183,7 +183,7 @@ const guides = [
   { 
     id: 23,
     name: "Rolly Resurreccion", 
-    verification: "Brgy. ID: 2026-023", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0906 142 6317",
     link: "tel:09061426317"
@@ -191,7 +191,7 @@ const guides = [
   { 
     id: 24,
     name: "Ernie Resurreccion", 
-    verification: "Brgy. ID: 2026-024", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0916 170 0248",
     link: "tel:09161700248"
@@ -199,7 +199,7 @@ const guides = [
   { 
     id: 25,
     name: "Danilo Esteva", 
-    verification: "Brgy. ID: 2026-025", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0969 019 4748",
     link: "tel:09690194748"
@@ -207,7 +207,7 @@ const guides = [
   { 
     id: 26,
     name: "Noriel Palmiano", 
-    verification: "Brgy. ID: 2026-026", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0965 142 5178",
     link: "tel:09651425178"
@@ -215,7 +215,7 @@ const guides = [
   { 
     id: 27,
     name: "Shedrick Ulayon", 
-    verification: "Brgy. ID: 2026-027", 
+    verification: "Brgy. ID: 2026-***", 
     type: "Local Guide",
     contact: "0997 554 0565",
     link: "tel:09975540565"
@@ -251,7 +251,7 @@ const Guide = () => {
               {/* Table Header */}
               <thead>
                 <tr className="bg-nature-900 text-white border-b border-nature-800 dark:border-white/10">
-                  <th className="py-5 px-6 font-serif text-lg tracking-wide">Guide Name</th>
+                  <th className="py-5 px-6 font-sans text-sm font-bold uppercase tracking-widest text-sun-500">Guide Name</th>
                   <th className="py-5 px-6 font-sans text-sm font-bold uppercase tracking-widest text-sun-500">Verification</th>
                   <th className="py-5 px-6 font-sans text-sm font-bold uppercase tracking-widest text-sun-500">Contact</th>
                 </tr>

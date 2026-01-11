@@ -41,7 +41,7 @@ To avoid "tutorial hell," we followed a strict architectural roadmap that evolve
 
 ## 3. 🚧 Challenges & Solutions
 
-Developing Version 1 came with specific technical hurdles. Here is how we solved them:
+Developing Version 2.0 came with specific technical hurdles as we evolved from a static showcase to a dynamic, API-driven application. Here is how we solved them:
 
 ### Challenge A: The "Broken Layout" after Reset
 * **Issue:** After resetting the folder structure, the site loaded as unstyled HTML. Tailwind classes were ignored.
@@ -66,17 +66,30 @@ Developing Version 1 came with specific technical hurdles. Here is how we solved
 ### Challenge E: API Integration & Data Management
 * **Issue:** Transitioning from static mock data to dynamic API-driven content while maintaining reliability.
 * **Root Cause:** Need for robust error handling, data validation, and fallback mechanisms when API is unavailable.
-* **Solution:** Implemented a layered architecture:
-    * *Service Layer:* `mountainService.js` handles all API communication with proper error handling
-    * *Fallback Strategy:* `useMountains` hook automatically falls back to mock data when API fails
-    * *State Management:* Custom hooks manage loading states, errors, and data synchronization
+* **Solution:** Implemented a comprehensive layered architecture:
+    * *Base API Service:* `api.js` provides a centralized HTTP client with standardized error handling and request/response processing
+    * *Domain Service Layer:* `mountainService.js` handles all mountain-specific CRUD operations with data validation and response normalization
+    * *Intelligent Fallback Strategy:* `useMountains` hook automatically detects API failures and seamlessly falls back to mock data
+    * *Enhanced State Management:* Custom hooks manage loading states, error handling, and real-time data synchronization
+    * *API Testing Utilities:* `testApi.js` provides comprehensive testing tools for validating API integration
 
 ### Challenge F: Admin Panel Security & Validation
 * **Issue:** Creating a secure, user-friendly admin interface for content management without compromising data integrity.
-* **Solution:** Built comprehensive form validation system:
-    * *Client-side Validation:* Real-time form validation with error messaging
-    * *Data Sanitization:* Slug generation and input cleaning
-    * *User Experience:* Loading states, confirmation dialogs, and success feedback
+* **Solution:** Built a comprehensive content management system:
+    * *Advanced Form Validation:* Real-time client-side validation with regex patterns for slug formatting and required field checking
+    * *Data Sanitization & Integrity:* Automatic slug generation, input cleaning, and data structure validation
+    * *Enhanced User Experience:* Loading states, confirmation dialogs, success feedback, and error recovery mechanisms
+    * *CRUD Operations Integration:* Seamless integration with API services for create, read, update, and delete operations
+    * *Form State Management:* Sophisticated form state handling with error tracking and validation feedback
+
+### Challenge G: State Synchronization & Performance
+* **Issue:** Ensuring consistent data state across components while maintaining optimal performance.
+* **Root Cause:** Complex data flow between API, fallback systems, and multiple UI components requiring real-time updates.
+* **Solution:** Implemented optimized state management architecture:
+    * *Custom Hook Architecture:* `useMountains`, `useMountain`, and `useTheme` hooks provide centralized state management
+    * *Automatic Refetching:* Smart data synchronization after CRUD operations to ensure UI consistency
+    * *Performance Optimization:* Efficient re-rendering patterns and state updates to minimize unnecessary component updates
+    * *Error Boundary Integration:* Graceful error handling that maintains application stability
 
 ---
 

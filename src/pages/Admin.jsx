@@ -79,14 +79,13 @@ const Admin = () => {
             </p>
           </div>
           
-          {!showForm && (
-            <button
-              onClick={handleAddNew}
-              className="flex items-center px-6 py-3 bg-sun-500 hover:bg-sun-600 text-white rounded-lg font-medium transition-colors"
-            >
-              <Plus className="w-5 h-5 mr-2" />
-              Add Mountain
-            </button>
+          {!showForm && (                <button
+                  onClick={handleAddNew}
+                  className="flex items-center px-6 py-3 bg-sun-500 hover:bg-sun-600 text-nature-900 hover:text-nature-900 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 border border-sun-500/50 hover:border-sun-600/50"
+                >
+                  <Plus className="w-5 h-5 mr-2" />
+                  Add Mountain
+                </button>
           )}
         </div>
 
@@ -191,7 +190,7 @@ const Admin = () => {
                 </p>
                 <button
                   onClick={handleAddNew}
-                  className="flex items-center px-6 py-3 bg-sun-500 hover:bg-sun-600 text-white rounded-lg font-medium transition-colors mx-auto"
+                  className="flex items-center px-6 py-3 bg-sun-500 hover:bg-sun-600 text-nature-900 hover:text-nature-900 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 border border-sun-500/50 hover:border-sun-600/50 mx-auto"
                 >
                   <Plus className="w-5 h-5 mr-2" />
                   Add First Mountain

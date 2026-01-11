@@ -34,7 +34,7 @@ const Hero = () => {
             className="flex items-center justify-center gap-3 mb-6"
           >
             <div className="h-[1px] w-12 bg-sun-500" />
-            <span className="text-white/90 text-sm tracking-[0.3em] uppercase font-sans font-medium">
+            <span className="text-white/90 dark:text-white/90 text-sm tracking-[0.3em] uppercase font-sans font-medium">
               Brgy. Kayrilaw, Nasugbu
             </span>
             <div className="h-[1px] w-12 bg-sun-500" />
@@ -44,7 +44,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 drop-shadow-2xl"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white dark:text-white mb-6 drop-shadow-2xl"
           >
             The Nasugbu Trilogy
           </motion.h1>
@@ -56,7 +56,7 @@ const Hero = () => {
           >
             <button 
               onClick={() => document.getElementById('trilogy-section').scrollIntoView({ behavior: 'smooth' })}
-              className="px-10 py-4 bg-sun-500 text-nature-900 font-bold text-sm tracking-widest uppercase rounded-full hover:bg-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 border border-sun-500/50 hover:border-white/50"
+              className="px-10 py-4 bg-sun-500 text-nature-900 font-bold text-sm tracking-widest uppercase rounded-full hover:bg-white hover:text-nature-900 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-2 border-2 border-sun-500 hover:border-white transform hover:scale-105 active:scale-95"
             >
               Explore the Peaks
             </button>

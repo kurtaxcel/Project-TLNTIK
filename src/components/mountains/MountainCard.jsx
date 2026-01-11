@@ -46,12 +46,12 @@ const MountainCard = ({ mountain }) => {
             <span className="text-sun-500 text-xs font-bold tracking-widest uppercase mb-2 block">
               {mountain.height}
             </span>
-            <h3 className="text-3xl font-serif text-white mb-2 group-hover:text-sun-500 transition-colors duration-300">{mountain.name}</h3>
-            <p className="text-white/90 line-clamp-2 mb-6 font-light">
+            <h3 className="text-3xl font-serif text-white dark:text-white mb-2 group-hover:text-sun-500 transition-colors duration-300">{mountain.name}</h3>
+            <p className="text-white/90 dark:text-white/90 line-clamp-2 mb-6 font-light">
               {mountain.desc}
             </p>
             
-            <div className="flex items-center gap-2 text-white font-medium group-hover:text-sun-500 transition-all duration-300">
+            <div className="flex items-center gap-2 text-white dark:text-white font-medium group-hover:text-sun-500 transition-all duration-300">
               <span>View Details</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </div>

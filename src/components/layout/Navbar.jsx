@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Mountain, Sun, Moon } from 'lucide-react';
+import { Menu, X, Mountain, Sun, Moon, MapPin } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom'; // ADDED: useLocation
 import useTheme from '../../hooks/useTheme';
 
@@ -29,13 +29,14 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
   ];
 
-  // LOGIC: Text color determination
-  // 1. If Scrolled: Always White (because nav background is dark green/black)
-  // 2. If Home & Not Scrolled: White (because it's over the dark hero image)
-  // 3. If Other Page & Not Scrolled: Dark Green (so it's visible on white bg)
-  const textColorClass = isScrolled || isHome || theme === 'dark'
-    ? 'text-white' 
-    : 'text-nature-900';
+  // LOGIC: Enhanced text color determination for maximum contrast and visibility
+  // 1. If Home & Not Scrolled: White (over dark hero image)
+  // 2. If Dark Theme: Always White for optimal contrast
+  // 3. If Light Theme & Scrolled: Dark Green (over opaque white background)
+  // 4. If Light Theme & Other Page: Dark Green with enhanced background
+  const textColorClass = (isHome && !isScrolled) || theme === 'dark'
+    ? 'text-white drop-shadow-lg' 
+    : 'text-nature-900 drop-shadow-sm';
 
   return (
     <>
@@ -44,15 +45,23 @@ const Navbar = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled 
-            ? 'glass-nature-strong dark:glass-strong-dark backdrop-blur-xl border-b border-white/20 shadow-glass-lg' 
-            : 'bg-transparent'
+            ? theme === 'light' 
+              ? 'glass-light-navbar-scrolled'
+              : 'glass-dark-navbar-scrolled'
+            : !isHome && theme === 'light'
+              ? 'glass-light-navbar'
+              : theme === 'dark' && !isHome
+                ? 'glass-dark-navbar'
+                : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             {/* Logo Box - adapts color */}
             <div className={`p-2 rounded-lg transition-all duration-300 ${
-              isScrolled || isHome ? 'glass-subtle' : 'glass-nature'
+              isScrolled || isHome || theme === 'dark' 
+                ? 'glass-subtle' 
+                : 'glass-nature bg-white/10 border-nature-900/20'
             } group-hover:bg-sun-500 group-hover:border-sun-500/50`}>
               <Mountain className={`w-6 h-6 transition-colors ${textColorClass}`} />
             </div>
@@ -82,12 +91,15 @@ const Navbar = () => {
 
             <button 
               onClick={() => window.open('https://maps.app.goo.gl/TKMgd8Cm8tVLMvo4A ', '_blank')}
-              className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${
-               isScrolled || isHome 
-                 ? 'glass-subtle text-white hover:bg-sun-500 hover:border-sun-500/50 hover:text-nature-900' 
-                 : 'bg-nature-900 text-white border border-transparent hover:bg-sun-500 hover:text-nature-900'
+              className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2 ${
+               theme === 'dark'
+                 ? 'bg-sun-500 text-nature-900 border border-sun-500/50 hover:bg-white hover:text-nature-900 hover:border-white/50'
+                 : isScrolled || isHome 
+                   ? 'bg-sun-500 text-nature-900 border border-sun-500/50 hover:bg-white hover:text-nature-900 hover:border-white/50' 
+                   : 'bg-nature-900 text-white border border-nature-900 hover:bg-sun-500 hover:text-nature-900 hover:border-sun-500'
             }`}
             >
+              <MapPin size={16} />
               Registration Office
             </button>
           </div>
