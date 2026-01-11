@@ -1,6 +1,6 @@
 # 📘 Development Documentation: Project TLNTIK
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 **Developer:** Kurt Axcel N. Peñano
 **Date:** January 2026
 
@@ -19,17 +19,23 @@ The existing resources for the Nasugbu Trilogy (Talamitam, Lantik, Apayang) were
 
 ---
 
-## 2. 🏗️ The 7-Phase Execution Plan
+## 2. 🏗️ The 10-Phase Execution Plan
 
-To avoid "tutorial hell," we followed a strict architectural roadmap:
+To avoid "tutorial hell," we followed a strict architectural roadmap that evolved as the project grew:
 
+### Original Foundation (Phases 1-7)
 * **Phase 1: Foundation:** Locked in the "Nature" color palette (`#1A3C34`, `#F2A900`) and configured Tailwind.
 * **Phase 2: Skeleton:** Established React Router structure (`App.jsx`) before building UI.
 * **Phase 3: Core Components:** Built the "Glassmorphic Navbar" and "Parallax Hero" as independent units.
 * **Phase 4: Data Layer:** Created a mock API (`mountains.js`) to simulate backend data flow.
 * **Phase 5: Page Assembly:** Connected components to create the Home and Trilogy views.
 * **Phase 6: The Polish:** Added Dark Mode, scroll animations, and transition effects.
-* **Phase 7: Integration:** (Future) Connecting to `insforge.dev` for headless content management.
+* **Phase 7: Integration:** Connected to `insforge.dev` for headless content management.
+
+### Advanced Features (Phases 8-10)
+* **Phase 8: API Architecture:** Built comprehensive API service layer with `api.js` and `mountainService.js` for robust backend communication.
+* **Phase 9: Admin Panel:** Developed full CRUD functionality with `MountainForm` component, form validation, and error handling for content management.
+* **Phase 10: Resilience & Testing:** Implemented intelligent fallback systems, API testing utilities, and enhanced state management with custom hooks.
 
 ---
 
@@ -56,6 +62,21 @@ Developing Version 1 came with specific technical hurdles. Here is how we solved
 ### Challenge D: Deep Linking
 * **Issue:** Clicking "View Details" on the Home page didn't scroll to the specific mountain on the Trilogy page.
 * **Solution:** Created a `<ScrollToTop />` helper component that detects URL hashes (e.g., `#lantik`) and triggers `element.scrollIntoView()`.
+
+### Challenge E: API Integration & Data Management
+* **Issue:** Transitioning from static mock data to dynamic API-driven content while maintaining reliability.
+* **Root Cause:** Need for robust error handling, data validation, and fallback mechanisms when API is unavailable.
+* **Solution:** Implemented a layered architecture:
+    * *Service Layer:* `mountainService.js` handles all API communication with proper error handling
+    * *Fallback Strategy:* `useMountains` hook automatically falls back to mock data when API fails
+    * *State Management:* Custom hooks manage loading states, errors, and data synchronization
+
+### Challenge F: Admin Panel Security & Validation
+* **Issue:** Creating a secure, user-friendly admin interface for content management without compromising data integrity.
+* **Solution:** Built comprehensive form validation system:
+    * *Client-side Validation:* Real-time form validation with error messaging
+    * *Data Sanitization:* Slug generation and input cleaning
+    * *User Experience:* Loading states, confirmation dialogs, and success feedback
 
 ---
 

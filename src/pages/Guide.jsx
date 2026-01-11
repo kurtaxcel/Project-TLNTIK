@@ -2,39 +2,223 @@ import SectionHeading from '../components/common/SectionHeading';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Phone, Facebook, BadgeCheck } from 'lucide-react';
 
-// Mock Data for Guides (You can move this to a separate file later)
+// Verified Guides Data - Real Guide Directory
 const guides = [
   { 
     id: 1,
-    name: "Juan Dela Cruz", 
-    verification: "Brgy. ID: 2025-001", 
+    name: "Delly", 
+    verification: "Brgy. ID: 2026-001", 
     type: "Local Guide",
-    contact: "0917-123-4567",
-    link: "tel:09171234567"
+    contact: "0992 535 6659",
+    link: "tel:09925356659"
   },
   { 
     id: 2,
-    name: "Maria Santos", 
-    verification: "DENR Accredited: #4A-23", 
-    type: "Master Guide",
-    contact: "m.me/mariasantos",
-    link: "https://messenger.com"
+    name: "Josh Garcia", 
+    verification: "Brgy. ID: 2026-002", 
+    type: "Local Guide",
+    contact: "0950 274 6207",
+    link: "tel:09502746207"
   },
   { 
     id: 3,
-    name: "Pedro Penduko", 
-    verification: "Tourism Certificate: TO-88", 
+    name: "Kim Badlis", 
+    verification: "Brgy. ID: 2026-003", 
     type: "Local Guide",
-    contact: "0998-987-6543",
-    link: "tel:09989876543"
+    contact: "0997 167 7923",
+    link: "tel:09971677923"
   },
   { 
     id: 4,
-    name: "Ana Reyes", 
-    verification: "Assoc. ID: TG-012", 
-    type: "Sweeper",
-    contact: "0912-345-6789",
-    link: "tel:09123456789"
+    name: "Marlyn Almario", 
+    verification: "Brgy. ID: 2026-004", 
+    type: "Local Guide",
+    contact: "0927 287 7321",
+    link: "tel:09272877321"
+  },
+  { 
+    id: 5,
+    name: "Emmanuel Dimapilis", 
+    verification: "Brgy. ID: 2026-005", 
+    type: "Local Guide",
+    contact: "0935 899 0079",
+    link: "tel:09358990079"
+  },
+  { 
+    id: 6,
+    name: "Maricel Badlis", 
+    verification: "Brgy. ID: 2026-006", 
+    type: "Local Guide",
+    contact: "0926 201 4074",
+    link: "tel:09262014074"
+  },
+  { 
+    id: 7,
+    name: "Myrna Obado", 
+    verification: "Brgy. ID: 2026-007", 
+    type: "Local Guide",
+    contact: "0994 276 1379",
+    link: "tel:09942761379"
+  },
+  { 
+    id: 8,
+    name: "Sherwin Bacquian", 
+    verification: "Brgy. ID: 2026-008", 
+    type: "Local Guide",
+    contact: "0965 139 7480",
+    link: "tel:09651397480"
+  },
+  { 
+    id: 9,
+    name: "Monica Saldania", 
+    verification: "Brgy. ID: 2026-009", 
+    type: "Local Guide",
+    contact: "0992 514 9845",
+    link: "tel:09925149845"
+  },
+  { 
+    id: 10,
+    name: "Lydia Flores", 
+    verification: "Brgy. ID: 2026-010", 
+    type: "Local Guide",
+    contact: "0955 449 2244",
+    link: "tel:09554492244"
+  },
+  { 
+    id: 11,
+    name: "Ella Badlis", 
+    verification: "Brgy. ID: 2026-011", 
+    type: "Local Guide",
+    contact: "0952 559 2230",
+    link: "tel:09525592230"
+  },
+  { 
+    id: 12,
+    name: "Mario Fontanilla", 
+    verification: "Brgy. ID: 2026-012", 
+    type: "Local Guide",
+    contact: "0975 461 0071",
+    link: "tel:09754610071"
+  },
+  { 
+    id: 13,
+    name: "C Jay Flores", 
+    verification: "Brgy. ID: 2026-013", 
+    type: "Local Guide",
+    contact: "0955 059 1859",
+    link: "tel:09550591859"
+  },
+  { 
+    id: 14,
+    name: "Edil Almario", 
+    verification: "Brgy. ID: 2026-014", 
+    type: "Local Guide",
+    contact: "0955 391 0247",
+    link: "tel:09553910247"
+  },
+  { 
+    id: 15,
+    name: "Manny Badlis", 
+    verification: "Brgy. ID: 2026-015", 
+    type: "Local Guide",
+    contact: "0997 167 7914",
+    link: "tel:09971677914"
+  },
+  { 
+    id: 16,
+    name: "Jenilyn Vislenio", 
+    verification: "Brgy. ID: 2026-016", 
+    type: "Local Guide",
+    contact: "0991 579 4974",
+    link: "tel:09915794974"
+  },
+  { 
+    id: 17,
+    name: "Salvador Alonzo", 
+    verification: "Brgy. ID: 2026-017", 
+    type: "Local Guide",
+    contact: "0955 390 1197",
+    link: "tel:09553901197"
+  },
+  { 
+    id: 18,
+    name: "Mark Anthony Umila", 
+    verification: "Brgy. ID: 2026-018", 
+    type: "Local Guide",
+    contact: "0965 754 9221",
+    link: "tel:09657549221"
+  },
+  { 
+    id: 19,
+    name: "Florida Paez", 
+    verification: "Brgy. ID: 2026-019", 
+    type: "Local Guide",
+    contact: "0948 888 6815",
+    link: "tel:09488886815"
+  },
+  { 
+    id: 20,
+    name: "Leonardo Perey", 
+    verification: "Brgy. ID: 2026-020", 
+    type: "Local Guide",
+    contact: "0950 902 5272",
+    link: "tel:09509025272"
+  },
+  { 
+    id: 21,
+    name: "Loida Palmiano", 
+    verification: "Brgy. ID: 2026-021", 
+    type: "Local Guide",
+    contact: "0955 755 1536",
+    link: "tel:09557551536"
+  },
+  { 
+    id: 22,
+    name: "Michael Badlis", 
+    verification: "Brgy. ID: 2026-022", 
+    type: "Local Guide",
+    contact: "0926 201 4074",
+    link: "tel:09262014074"
+  },
+  { 
+    id: 23,
+    name: "Rolly Resurreccion", 
+    verification: "Brgy. ID: 2026-023", 
+    type: "Local Guide",
+    contact: "0906 142 6317",
+    link: "tel:09061426317"
+  },
+  { 
+    id: 24,
+    name: "Ernie Resurreccion", 
+    verification: "Brgy. ID: 2026-024", 
+    type: "Local Guide",
+    contact: "0916 170 0248",
+    link: "tel:09161700248"
+  },
+  { 
+    id: 25,
+    name: "Danilo Esteva", 
+    verification: "Brgy. ID: 2026-025", 
+    type: "Local Guide",
+    contact: "0969 019 4748",
+    link: "tel:09690194748"
+  },
+  { 
+    id: 26,
+    name: "Noriel Palmiano", 
+    verification: "Brgy. ID: 2026-026", 
+    type: "Local Guide",
+    contact: "0965 142 5178",
+    link: "tel:09651425178"
+  },
+  { 
+    id: 27,
+    name: "Shedrick Ulayon", 
+    verification: "Brgy. ID: 2026-027", 
+    type: "Local Guide",
+    contact: "0997 554 0565",
+    link: "tel:09975540565"
   },
 ];
 

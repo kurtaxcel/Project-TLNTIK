@@ -12,6 +12,10 @@ This initiative combines eco-tourism promotion with modern web technologies, pro
 * **Smart Dark Mode:** A system-aware theme toggle that adapts typography and contrast for night-time readability.
 * **Interactive Guide Directory:** A trusted list of verified local guides with direct "Call" and "Message" integration.
 * **Deep Linking:** "View Details" functionality that smoothly navigates and scrolls to specific mountain sections.
+* **Admin Panel:** Full CRUD (Create, Read, Update, Delete) functionality for managing mountain data with form validation.
+* **API Integration:** Seamless backend connectivity with insforge.dev for dynamic content management and data persistence.
+* **Fallback System:** Intelligent fallback to local mock data when API is unavailable, ensuring uninterrupted user experience.
+* **Dynamic Content Management:** Real-time mountain data updates without requiring code deployments.
 * **Performance First:** Built with Vite and React for lightning-fast loading, even on mobile data.
 
 ## ⛰️ The Trilogy
@@ -23,10 +27,13 @@ This initiative combines eco-tourism promotion with modern web technologies, pro
 ## 🛠️ Tech Stack
 
 * **Frontend:** React (v18), Vite
-* **Styling:** Tailwind CSS
+* **Styling:** Tailwind CSS, PostCSS, Autoprefixer
 * **Animations:** Framer Motion
 * **Icons:** Lucide React
 * **Routing:** React Router DOM (v6)
+* **Backend Integration:** insforge.dev API
+* **State Management:** Custom React Hooks (useMountains, useMountain, useTheme)
+* **Development Tools:** ESLint for code quality
 
 ## 🚀 Getting Started
 
@@ -56,13 +63,16 @@ Follow these steps to run the project locally.
 ```
 /src
 ├── /components
+│   ├── /admin       # Admin Panel Components (MountainForm)
 │   ├── /common      # Reusable UI (SectionHeading, Buttons)
 │   ├── /home        # Hero section & Landing components
 │   ├── /layout      # Navbar (Glassmorphic) & Footer
 │   └── /mountains   # Mountain Showcase Cards
 ├── /data            # Mock Data for Mountains & Guides
-├── /hooks           # Custom Logic (useTheme)
-├── /pages           # Main Views (Home, Trilogy, Guide, About)
+├── /hooks           # Custom Logic (useTheme, useMountains, useMountain)
+├── /pages           # Main Views (Home, Trilogy, Guide, About, Admin)
+├── /services        # API Integration (api.js, mountainService.js)
+├── /utils           # Utility Functions (testApi.js)
 └── App.jsx          # Routing & Scroll Logic
 ```
 

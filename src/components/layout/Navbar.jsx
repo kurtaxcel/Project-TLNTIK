@@ -44,16 +44,16 @@ const Navbar = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled 
-            ? 'bg-nature-900/90 dark:bg-black/80 backdrop-blur-md border-b border-white/10 shadow-lg' 
+            ? 'glass-nature-strong dark:glass-strong-dark backdrop-blur-xl border-b border-white/20 shadow-glass-lg' 
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             {/* Logo Box - adapts color */}
-            <div className={`p-2 rounded-lg backdrop-blur-sm transition-colors duration-300 ${
-              isScrolled || isHome ? 'bg-white/10' : 'bg-nature-900/10'
-            } group-hover:bg-sun-500`}>
+            <div className={`p-2 rounded-lg transition-all duration-300 ${
+              isScrolled || isHome ? 'glass-subtle' : 'glass-nature'
+            } group-hover:bg-sun-500 group-hover:border-sun-500/50`}>
               <Mountain className={`w-6 h-6 transition-colors ${textColorClass}`} />
             </div>
             <span className={`font-serif text-xl tracking-wider font-bold transition-colors ${textColorClass}`}>
@@ -81,14 +81,14 @@ const Navbar = () => {
             </button>
 
             <button 
-              onClick={() => window.open('https://maps.app.goo.gl/9XYF9DU8VYZ4o1yg8 ', '_blank')}
-              className={`px-5 py-2 rounded-full font-semibold backdrop-blur-sm transition-all duration-300 text-sm border ${
+              onClick={() => window.open('https://maps.app.goo.gl/TKMgd8Cm8tVLMvo4A ', '_blank')}
+              className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${
                isScrolled || isHome 
-                 ? 'bg-white/10 text-white border-white/20 hover:bg-sun-500' 
-                 : 'bg-nature-900 text-white border-transparent hover:bg-sun-500 hover:text-nature-900'
+                 ? 'glass-subtle text-white hover:bg-sun-500 hover:border-sun-500/50 hover:text-nature-900' 
+                 : 'bg-nature-900 text-white border border-transparent hover:bg-sun-500 hover:text-nature-900'
             }`}
             >
-              Get Directions
+              Registration Office
             </button>
           </div>
 

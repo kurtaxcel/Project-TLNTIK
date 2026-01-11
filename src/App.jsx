@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Trilogy from './pages/Trilogy'; // Import the real file
 import Guide from './pages/Guide'; // Import the real file
 import About from './pages/About'; // Import the real file
+import Admin from './pages/Admin'; // Import the admin page
 
 // Helper Component to handle scrolling
 const ScrollToTop = () => {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/trilogy" element={<Trilogy />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/about" element={<About />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );
